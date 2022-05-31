@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Latin</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="final">
+    <section>
+
+        <h1>Pig Latin</h1>
+        <form action="/quotes" method="POST">
+            <input type="text" placeholder="name" name="name">
+            <input type="text" placeholder="quote" name="quote">
+            <button type="submit">Submit</button>
+        </form>
+        <h2> Words </h2>
+    
+        <ul class="quotes">
+            <% for(var i=0; i < quotes.length; i++) {%>
+                <li class="quote">
+                    <span><%= quotes[i].name %></span>
+                    <span><%= quotes[i].quote %></span>
+                    <span><i class="fa fa-thumbs-up pig" aria-hidden="true"></i></span>
+                </li>
+                <% } %>
+        </ul>
+        <div>
+            <h2>Can You Smell the Bacon?</h2>
+            <p>
+                Start word transformation to its Pig Latin version by pressing thumbs up
+            </p> 
+            <!-- <button id="update-button">Replace message</button> -->
+        </div>
+        <!-- <div>
+            <h2>Remove Darth Vader!</h2>
+            <p>
+                Delete one Darth Vader's quote. Does nothing if there are no more Darth
+                Vadar's quote
+            </p>
+            <button id="delete-button">Delete Darth Vadar's quote</button>
+        </div>
+        <div id="message"></div> -->
+
+</section>
+    <script src="/main.js"></script>
+</body>
+
+</html>
